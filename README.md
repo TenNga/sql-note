@@ -114,3 +114,34 @@ RESULT:
 ![](andOR.jpg)
 
 
+## ORDER BY 
+
+ORDER BY keyword is used to sort the result by ascending (ASC) or descending (DESC) 
+
+### ORDER BY Syntax:
+
+```sql
+SELECT column1, column2, ...
+FROM table_name
+ORDER BY column1, column2, ... ASC|DESC;
+```
+Example: by default ORDER BY is ascending (ASC)
+```sql
+SELECT * FROM Customers
+ORDER BY Country;
+```
+Example: Descending
+```sql
+SELECT * FROM Customers
+ORDER BY Country DESC;
+```
+
+#### ORDER BY multiple columns:
+
+- With multiple columns, it means that first column will be sorted and if there are any same value then it will use next column to sort it. 
+
+Example: First it orders by Country, but if some rows have the same Country, it orders them by CustomerName
+```sql
+SELECT * FROM Customers
+ORDER BY Country, CustomerName;
+```
