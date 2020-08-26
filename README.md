@@ -1,6 +1,6 @@
-# SQL Note
+# :minidisc: SQL Note
 
-# 1. Select Data from database
+# :page_with_curl: SELECT 
 
 ```sql
 SELECT column_name1, column_name2,...
@@ -23,7 +23,7 @@ FROM Customers;
 
 ![](select.JPG)
 
-## Select Distinct
+## :fast_forward: Select Distinct
 
 Syntax:
 ```sql
@@ -37,7 +37,7 @@ SELECT DISTINCT Country
 FROM Customers;
 ```
 
-## WHERE Clause
+# :page_with_curl: WHERE Clause
 
 Syntax:
 ```sql
@@ -58,7 +58,7 @@ WHERE Country = "Mexico";
 ![](where.JPG)
 
 
-## AND, OR and NOT Operator
+## :fast_forward: AND, OR and NOT Operator
 
 - WHERE clauses can have a combination of AND, OR and NOT operator.
 
@@ -66,7 +66,7 @@ WHERE Country = "Mexico";
 - OR operator display the result if anyone side is true.
 - NOT operator display the result if condition is NOT TRUE.
 
-### AND Operator Syntax:
+### :arrow_right_hook: AND Operator Syntax:
 ```sql
 SELECT column1, column2,...
 FROM table_name;
@@ -78,7 +78,7 @@ Example:
 SELECT * FROM Customers
 WHERE Country='Germany' AND City='Berlin';
 ```
-### OR Operator Syntax:
+### :arrow_right_hook: OR Operator Syntax:
 ```sql
 SELECT column1, column2, ...
 FROM table_name
@@ -90,7 +90,7 @@ Example:
 SELECT * FROM Customers
 WHERE City='Berlin' OR City='München';
 ```
-### NOT Operator Syntax:
+### :arrow_right_hook: NOT Operator Syntax:
 ```sql
 SELECT column1, column2, ...
 FROM table_name
@@ -103,7 +103,7 @@ SELECT * FROM Customers
 WHERE NOT Country='Germany';
 ```
 
-#### Combination of AND and OR operator:
+### :arrow_right_hook: Combination of AND and OR operator:
 
 ```sql
 SELECT * FROM Customers
@@ -114,7 +114,7 @@ RESULT:
 ![](andOR.jpg)
 
 
-## ORDER BY 
+# :page_with_curl: ORDER BY 
 
 ORDER BY keyword is used to sort the result by ascending (ASC) or descending (DESC) 
 
@@ -136,7 +136,7 @@ SELECT * FROM Customers
 ORDER BY Country DESC;
 ```
 
-#### ORDER BY multiple columns:
+### :fast_forward: ORDER BY multiple columns:
 
 - With multiple columns, it means that first column will be sorted and if there are any same value then it will use next column to sort it. 
 
