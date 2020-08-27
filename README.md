@@ -228,3 +228,24 @@ UPDATE Customers
 SET ContactName = 'Alfred Schmidt', City= 'Frankfurt'
 WHERE CustomerID = 1;
 ```
+
+
+
+
+
+
+# :page_with_curl: DELETE Statement
+
+DELETE is use to remove/delete record in the table.
+
+###  :fast_forward: DELETE Syntax:
+- Remember to use WHERE clauses to choose specific data.
+- All data will be deleted if you fails to mention/use WHERE clause. 
+
+```sql
+DELETE FROM table_name WHERE condition;
+```
+:arrow_right_hook: Example: Deleting a record where CustomerName is equal to "Alfreds Futterkiste".
+```sql
+ELETE FROM Customers WHERE CustomerName='Alfreds Futterkiste';
+```
