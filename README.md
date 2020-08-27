@@ -171,3 +171,22 @@ VALUES ('Cardinal', 'Tom B. Erichsen', 'Skagen 21', 'Stavanger', '4006', 'Norway
 INSERT INTO table_name
 VALUES (value1, value2, value3, ...);
 ```
+# :page_with_curl: NULL Value
+
+NULL is value not like zero as it has no value at all. Optional fields in Database with no value has NULL.
+
+### :fast_forward: NULL checker
+- IS NULL
+- IS NOT NULL
+
+```sql
+SELECT column_names
+FROM table_name
+WHERE column_name IS NULL;
+```
+:arrow_right_hook: Example: Result with all address with no value.
+```sql
+SELECT CustomerName, ContactName, Address
+FROM Customers
+WHERE Address IS NULL;
+```
