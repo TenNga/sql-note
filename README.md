@@ -145,3 +145,29 @@ Example: First it orders by Country, but if some rows have the same Country, it 
 SELECT * FROM Customers
 ORDER BY Country, CustomerName;
 ```
+# :page_with_curl: INSERT INTO
+
+INSERT INTO is used to insert new record into the table
+
+
+###  :fast_forward: INSERT INTO Syntax:
+- There are TWO ways
+  
+:arrow_right_hook: First one: Using both column name and values to be inserted
+
+```sql
+INSERT INTO table_name (column1, column2, column3, ...)
+VALUES (value1, value2, value3, ...);
+```
+Example: Mention both column and value to be inserted
+```sql
+INSERT INTO Customers (CustomerName, ContactName, Address, City, PostalCode, Country)
+VALUES ('Cardinal', 'Tom B. Erichsen', 'Skagen 21', 'Stavanger', '4006', 'Norway');
+```
+ 
+:arrow_right_hook: Second one: Using only values to insert it in to all column. Order of values matters
+
+```sql
+INSERT INTO table_name
+VALUES (value1, value2, value3, ...);
+```
