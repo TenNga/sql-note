@@ -114,6 +114,10 @@ RESULT:
 ![](andOR.jpg)
 
 
+
+
+
+
 # :page_with_curl: ORDER BY 
 
 ORDER BY keyword is used to sort the result by ascending (ASC) or descending (DESC) 
@@ -145,6 +149,10 @@ Example: First it orders by Country, but if some rows have the same Country, it 
 SELECT * FROM Customers
 ORDER BY Country, CustomerName;
 ```
+
+
+
+
 # :page_with_curl: INSERT INTO
 
 INSERT INTO is used to insert new record into the table
@@ -171,6 +179,11 @@ VALUES ('Cardinal', 'Tom B. Erichsen', 'Skagen 21', 'Stavanger', '4006', 'Norway
 INSERT INTO table_name
 VALUES (value1, value2, value3, ...);
 ```
+
+
+
+
+
 # :page_with_curl: NULL Value
 
 NULL is value not like zero as it has no value at all. Optional fields in Database with no value has NULL.
@@ -189,4 +202,29 @@ WHERE column_name IS NULL;
 SELECT CustomerName, ContactName, Address
 FROM Customers
 WHERE Address IS NULL;
+```
+
+
+
+
+
+
+# :page_with_curl: UPDATE Statement
+
+UPDATE is use to modify the existing data/records in a table
+
+###  :fast_forward: UPDATE Syntax:
+- Remember to use WHERE clauses to choose specific data.
+- All data will be updated if you fails to mention/use WHERE clause. 
+
+```sql
+UPDATE table_name
+SET column1 = value1, column2 = value2, ...
+WHERE condition;
+```
+:arrow_right_hook: Example: Updating record with CustomerID equals to 1
+```sql
+UPDATE Customers
+SET ContactName = 'Alfred Schmidt', City= 'Frankfurt'
+WHERE CustomerID = 1;
 ```
