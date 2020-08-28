@@ -1,4 +1,5 @@
 # :minidisc: SQL Note
+- SQL is use to handle data in database 
 
 # :page_with_curl: SELECT 
 
