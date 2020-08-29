@@ -314,3 +314,38 @@ SELECT TOP 50 PERCENT * FROM Customers;
 
 ![](50percentCustomer.JPG)
 
+
+
+
+
+
+
+# :page_with_curl: MIN() and MAX() Function
+
+Min() and MAX() is a function that will return a MINIMUM/MAXIMUM value from a given column.
+
+###  :fast_forward: MIN() Syntax:
+
+```sql
+SELECT MIN(column_name)
+FROM table_name
+WHERE condition;
+```
+:arrow_right_hook: Example: Return smallest price from price column.
+```sql
+SELECT MIN(Price) AS SmallestPrice
+FROM Products;
+```
+
+###  :fast_forward: MAX() Syntax:
+
+```sql
+SELECT MAX(column_name)
+FROM table_name
+WHERE condition;
+```
+:arrow_right_hook: Example: Return largest price from price column.
+```sql
+SELECT MAX(Price) AS LargestPrice
+FROM Products;
+```
