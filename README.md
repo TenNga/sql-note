@@ -250,3 +250,67 @@ DELETE FROM table_name WHERE condition;
 ```sql
 ELETE FROM Customers WHERE CustomerName='Alfreds Futterkiste';
 ```
+
+
+
+
+
+# :page_with_curl: TOP, LIMIT or ROWNUM 
+
+SELECT TOP is used to specify some number of record to return.
+
+###  :fast_forward: SELECT TOP Syntax:
+- Remember that SELECT TOP is not support in stall database sytems.
+
+```sql
+SELECT TOP number|percent column_name(s)
+FROM table_name
+WHERE condition;
+```
+
+###  :fast_forward: LIMIT Syntax:
+- SELECT TOP is equit to LIMIT in MySQL
+
+```sql
+SELECT column_name(s)
+FROM table_name
+WHERE condition
+LIMIT number;
+```
+###  :fast_forward: ROWNUM Syntax:
+- SELECT TOP is equit to ROWNUM in Oracle
+
+```sql
+SELECT column_name(s)
+FROM table_name
+WHERE ROWNUM <= number;
+```
+
+:arrow_right_hook: Example: Three statement below will return same result.
+- SQL
+```sql
+SELECT TOP 3 * FROM Customers;
+```
+- MySQL
+```sql
+SELECT * FROM Customers
+LIMIT 3;
+```
+- Oracle
+```sql
+SELECT * FROM Customers
+WHERE ROWNUM <= 3;
+```
+###  :fast_forward: TOP PERCENT example:
+- Return percentage of record from the data.
+
+:arrow_right_hook: Example: 
+- From 12 customer record, only 50% will be return.
+- Only 6 will return.
+
+```sql
+SELECT TOP 50 PERCENT * FROM Customers;
+```
+
+![](50percentCustomer.JPG)
+
