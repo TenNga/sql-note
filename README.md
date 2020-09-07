@@ -349,3 +349,32 @@ WHERE condition;
 SELECT MAX(Price) AS LargestPrice
 FROM Products;
 ```
+
+
+
+
+
+
+
+
+# :page_with_curl: COUNT(), AVG() and SUM() Function
+
+The COUNT() function returns the number of rows that matches a specified criterion.
+
+The AVG() function returns the average value of a numeric column.
+
+The SUM() function returns the total sum of a numeric column.
+
+###  :fast_forward: COUNT() Syntax:
+
+```sql
+SELECT COUNT(column_name)
+FROM table_name
+WHERE condition;
+```
+
+:arrow_right_hook: Example: Finds the number of products:
+```sql
+SELECT COUNT(ProductID)
+FROM Products;
+```
