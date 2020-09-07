@@ -374,7 +374,22 @@ WHERE condition;
 ```
 
 :arrow_right_hook: Example: Finds the number of products:
+Note: NULL values are not counted.
 ```sql
 SELECT COUNT(ProductID)
+FROM Products;
+```
+
+###  :fast_forward: AVG() Syntax:
+
+```sql
+SELECT AVG(column_name)
+FROM table_name
+WHERE condition;
+```
+
+:arrow_right_hook: Example: Finds the average price of all products:
+```sql
+SELECT AVG(Price)
 FROM Products;
 ```
