@@ -393,3 +393,30 @@ WHERE condition;
 SELECT AVG(Price)
 FROM Products;
 ```
+
+
+
+
+# :page_with_curl: LIKE Operator
+
+LIKE Operator is used in a WHERE clause to search for a specific pattern in a column.
+
+Pattern like finding names with first letter "T".
+
+###  :fast_forward: LIKE Syntax:
+
+```sql
+SELECT column1, column2, ...
+FROM table_name
+WHERE columnN LIKE pattern;
+```
+### Here are some examples of LIKE Operator with '%' and '_'.
+
+![](LIKE.JPG)
+
+
+:arrow_right_hook: Example: Finds the all customer who's name starts with 'a':
+```sql
+SELECT * FROM Customers
+WHERE CustomerName LIKE 'a%';
+```
