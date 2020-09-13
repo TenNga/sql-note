@@ -426,3 +426,46 @@ WHERE CustomerName LIKE 'a%';
 SELECT * FROM Customers
 WHERE CustomerName LIKE '_r%';
 ```
+
+
+
+
+
+
+
+
+
+
+# :page_with_curl: IN Operator
+
+IN operator allow you to have multiple values in WHERE clause.
+
+IN Operator is a shorthand for multiple OR condition.
+
+###  :fast_forward: IN Syntax:
+
+```sql
+SELECT column_name(s)
+FROM table_name
+WHERE column_name IN (value1, value2, ...);
+```
+### OR
+
+```sql
+SELECT column_name(s)
+FROM table_name
+WHERE column_name IN (SELECT STATEMENT);
+```
+
+
+:arrow_right_hook: Example: Finds the all customer who are located in 'Germany', 'France' and 'Uk':
+```sql
+SELECT * FROM Customers
+WHERE Country IN ('Germany', 'France', 'UK');
+```
+
+:arrow_right_hook: Example: Finds the all customer who are from the same countries as the suppliers:
+```sql
+SELECT * FROM Customers
+WHERE Country IN (SELECT Country FROM Suppliers);
+```
