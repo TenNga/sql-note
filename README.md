@@ -420,3 +420,9 @@ WHERE columnN LIKE pattern;
 SELECT * FROM Customers
 WHERE CustomerName LIKE 'a%';
 ```
+
+:arrow_right_hook: Example: Finds the all customer who's name have 'r' in the second position:
+```sql
+SELECT * FROM Customers
+WHERE CustomerName LIKE '_r%';
+```
