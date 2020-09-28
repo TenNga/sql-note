@@ -512,3 +512,31 @@ Example
 SELECT * FROM Orders
 WHERE OrderDate BETWEEN #01/07/1996# AND #31/07/1996#;
 ```
+
+
+
+
+
+
+
+
+
+
+# :page_with_curl: Aliases (AS)
+
+Aliases is a naming style used in SQL to give temporary name to Table, Column, result.
+
+###  :fast_forward: Aliases Syntax:
+
+```sql
+SELECT column_name AS alias_name
+FROM table_name;
+```
+
+
+:arrow_right_hook: Example: Creates two aliases, one for the CustomerID column and one for the CustomerName column:
+```sql
+SELECT CustomerID AS ID, CustomerName AS Customer
+FROM Customers;
+```
+
