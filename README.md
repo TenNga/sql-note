@@ -469,3 +469,46 @@ WHERE Country IN ('Germany', 'France', 'UK');
 SELECT * FROM Customers
 WHERE Country IN (SELECT Country FROM Suppliers);
 ```
+
+
+
+
+
+
+
+
+# :page_with_curl: BETWEEN Operator
+
+BETWEEN Operator selects values within a given range. (Value = number,text,dates)
+BETWEEN Operator consider value at the beginning and ending. (Inclusive)
+
+
+###  :fast_forward: BETWEEN Syntax:
+
+```sql
+SELECT column_name(s)
+FROM table_name
+WHERE column_name BETWEEN value1 AND value2;
+```
+
+
+:arrow_right_hook: Example: Find all products with a price BETWEEN 10 and 20:
+```sql
+SELECT * FROM Products
+WHERE Price BETWEEN 10 AND 20;
+```
+
+:arrow_right_hook: Example: Find all products with a ProductName BETWEEN Carnarvon Tigers and Mozzarella di Giovanni:
+```sql
+SELECT * FROM Products
+WHERE ProductName BETWEEN 'Carnarvon Tigers' AND 'Mozzarella di Giovanni'
+ORDER BY ProductName;
+```
+
+:arrow_right_hook: Example: Find all orders with an OrderDate BETWEEN '01-July-1996' and '31-July-1996':
+
+Example
+```sql
+SELECT * FROM Orders
+WHERE OrderDate BETWEEN #01/07/1996# AND #31/07/1996#;
+```
